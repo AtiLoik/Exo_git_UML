@@ -1,5 +1,6 @@
 package metier;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ecole {
@@ -20,6 +21,7 @@ public class Ecole {
 		super();
 		this.nomEcole = nomEcole;
 		this.adresseEcole = adresse;
+		listeEtudiants = new ArrayList<Etudiant>();
 	}
 
 	public String getNomEcole() {

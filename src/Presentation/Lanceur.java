@@ -11,7 +11,9 @@ public class Lanceur {
 		Etudiant etudiant1 = new Etudiant("1", "Morgan", "Franca");
 		Etudiant etudiant2 = new Etudiant("2", "Loik", "Breton");
 		
-		List<Etudiant> etudiantsInscrits = new ArrayList<Etudiant>();
+		Ecole ecole = new Ecole("ENSUP", "1 bis Avenue du 8 mai 1945");
+		
+		List<Etudiant> etudiantsInscrits = ecole.getListeEtudiants();
 		
 		if(etudiant1.inscrire())
 		{
@@ -24,8 +26,6 @@ public class Lanceur {
 			System.out.println(etudiant2.faireExamen());
 			etudiantsInscrits.add(etudiant2);
 		}
-		
-		Ecole ecole = new Ecole("ENSUP", "1 bis Avenue du 8 mai 1945", etudiantsInscrits);
 		
 		System.out.println(ecole.toString());
 	}
