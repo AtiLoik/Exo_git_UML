@@ -5,6 +5,8 @@ public class Etudiant {
 	private String prenom;
 	private String nom;
 	
+	private Ecole ecole;
+	
 	// Constructeur
 	public Etudiant(String numEtudiant, String prenom, String nom) {
 		super();
@@ -14,7 +16,7 @@ public class Etudiant {
 	}
 	
 	public String faireExamen() {
-		return nom + " a fait l'examen";
+		return prenom + " " + nom + " a fait l'examen";
 	}
 	
 	public boolean inscrire() {
@@ -43,5 +45,18 @@ public class Etudiant {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+	public Ecole getEcole() {
+		return ecole;
+	}
+
+	public void setEcole(Ecole ecole) {
+		this.ecole = ecole;
+	}
+
+	@Override
+	public String toString() {
+		return "Etudiant [numEtudiant=" + numEtudiant + ", prenom=" + prenom + ", nom=" + nom + "]";
 	}
 }

@@ -4,16 +4,22 @@ import java.util.List;
 
 public class Ecole {
 	private String nomEcole;
-	private String adresse;
+	private String adresseEcole;
 	
-	List<Etudiant> listeEtudiants;
+	private List<Etudiant> listeEtudiants;
 	
-	// Constructeur
+	// Constructeurs
 	public Ecole(String nomEcole, String adresse, List<Etudiant> listeEtudiants) {
 		super();
 		this.nomEcole = nomEcole;
-		this.adresse = adresse;
+		this.adresseEcole = adresse;
 		this.listeEtudiants = listeEtudiants;
+	}
+
+	public Ecole(String nomEcole, String adresse) {
+		super();
+		this.nomEcole = nomEcole;
+		this.adresseEcole = adresse;
 	}
 
 	public String getNomEcole() {
@@ -25,11 +31,11 @@ public class Ecole {
 	}
 
 	public String getAdresse() {
-		return adresse;
+		return adresseEcole;
 	}
 
 	public void setAdresse(String adresse) {
-		this.adresse = adresse;
+		this.adresseEcole = adresse;
 	}
 
 	public List<Etudiant> getListeEtudiants() {
@@ -42,6 +48,6 @@ public class Ecole {
 
 	@Override
 	public String toString() {
-		return "Ecole [nomEcole=" + nomEcole + ", adresse=" + adresse + ", listeEtudiants=" + listeEtudiants + "]";
+		return "Ecole [nomEcole=" + nomEcole + ", adresse=" + adresseEcole + "]";
 	}
 }
